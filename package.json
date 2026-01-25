@@ -1,0 +1,7 @@
+{
+  "name": "tui-ts-lab",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ]
+}
