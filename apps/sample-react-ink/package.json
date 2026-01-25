@@ -2,23 +2,23 @@
   "name": "sample-react-ink",
   "version": "1.0.0",
   "description": "File Processing Simulator - A React Ink CLI sample app",
-  "type": "module",
+  "keywords": [
+    "cli",
+    "ink",
+    "react",
+    "sample"
+  ],
+  "license": "ISC",
+  "author": "",
   "bin": {
     "file-processor": "./dist/cli.js"
   },
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "start": "bun run src/cli.tsx",
     "dev": "bun --watch src/cli.tsx"
   },
-  "keywords": [
-    "react",
-    "ink",
-    "cli",
-    "sample"
-  ],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@inkjs/ui": "^2.0.0",
     "chalk": "^5.6.2",
