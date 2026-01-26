@@ -4,11 +4,15 @@ import { DiffViewer } from "./components/DiffViewer";
 import { FileSelector } from "./components/FileSelector";
 import { StatusBar } from "./components/StatusBar";
 import { HelpPanel } from "./components/HelpPanel";
-import { sampleDiffs } from "./data/sampleDiff";
+import type { DiffData } from "./data/sampleDiff";
 
 type ViewMode = "unified" | "split";
 
-export function App() {
+interface AppProps {
+  diffs: DiffData[];
+}
+
+export function App({ diffs }: AppProps) {
   const [selectedFileIndex, setSelectedFileIndex] = useState(0);
   const [viewMode, setViewMode] = useState<ViewMode>("unified");
   const [showHelp, setShowHelp] = useState(false);
@@ -22,21 +26,21 @@ export function App() {
       setSelectedFileIndex((prev) => Math.max(0, prev - 1));
     }
     if (key.name === "k" || key.name === "up") {
-      setSelectedFileIndex((prev) => Math.min(sampleDiffs.length - 1, prev + 1));
+      setSelectedFileIndex((prev) => Math.min(diffs.length - 1, prev + 1));
     }
     if (key.name === "m") {
       setViewMode((prev) => (prev === "unified" ? "split" : "unified"));
     }
   });
 
-  const currentDiff = sampleDiffs[selectedFileIndex];
+  const currentDiff = diffs[selectedFileIndex];
   if (!currentDiff) {
     return <text>No diff data available</text>;
   }
 
   return (
     <box flexDirection="column" width={width} height={height}>
-      <FileSelector files={sampleDiffs.map((d) => d.filename)} selectedIndex={selectedFileIndex} />
+      <FileSelector files={diffs.map((d) => d.filename)} selectedIndex={selectedFileIndex} />
       <DiffViewer key={currentDiff.filename} diffData={currentDiff} mode={viewMode} />
       <StatusBar viewMode={viewMode} filename={currentDiff.filename} />
       {showHelp && <HelpPanel />}
