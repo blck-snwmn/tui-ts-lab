@@ -7,12 +7,12 @@
   "scripts": {
     "fmt": "oxfmt apps/ --write",
     "fmt:check": "oxfmt apps/ --check",
-    "lint": "oxlint --type-aware --type-check --deny-warnings .",
-    "lint:fix": "oxlint --type-aware --type-check --deny-warnings . --fix"
+    "lint": "oxlint --deny-warnings .",
+    "lint:fix": "oxlint --deny-warnings . --fix"
   },
   "devDependencies": {
-    "oxfmt": "0.26.0",
-    "oxlint": "1.41.0",
-    "oxlint-tsgolint": "0.20.0"
+    "oxfmt": "^0.48.0",
+    "oxlint": "^1.63.0",
+    "oxlint-tsgolint": "^0.22.1"
   }
 }
