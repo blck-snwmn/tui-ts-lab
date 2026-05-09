@@ -5,8 +5,8 @@
     "apps/*"
   ],
   "scripts": {
-    "fmt": "oxfmt apps/ --write",
-    "fmt:check": "oxfmt apps/ --check",
+    "fmt": "oxfmt --write apps/",
+    "fmt:check": "oxfmt --check apps/",
     "lint": "oxlint --deny-warnings .",
     "lint:fix": "oxlint --deny-warnings . --fix"
   },
