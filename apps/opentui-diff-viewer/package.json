@@ -8,8 +8,8 @@
     "dev": "bun --watch src/index.tsx"
   },
   "dependencies": {
-    "@opentui/core": "0.4.1",
-    "@opentui/react": "0.4.1",
+    "@opentui/core": "0.4.2",
+    "@opentui/react": "0.4.2",
     "react": "^19.2.3"
   },
   "devDependencies": {
