@@ -21,10 +21,16 @@ jobs:
         with:
           bun-version: latest
 
-      - run: bun install
+      - run: bun install --frozen-lockfile
 
       - name: Check format
         run: bun run fmt:check
 
       - name: Lint
         run: bun run lint
+
+      - name: Typecheck
+        run: bun run typecheck
+
+      - name: Build
+        run: bun run build
