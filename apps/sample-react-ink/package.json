@@ -17,7 +17,8 @@
   "scripts": {
     "build": "tsc",
     "start": "bun run src/cli.tsx",
-    "dev": "bun --watch src/cli.tsx"
+    "dev": "bun --watch src/cli.tsx",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@inkjs/ui": "^2.0.0",
