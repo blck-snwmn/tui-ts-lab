@@ -21,11 +21,12 @@ jobs:
 
       - run: bun install --frozen-lockfile
 
-      - name: Check format
-        run: bun run fmt:check
+      - parallel:
+          - name: Check format
+            run: bun run fmt:check
 
-      - name: Lint
-        run: bun run lint
+          - name: Lint
+            run: bun run lint
 
       - name: Build
         run: bun run build
