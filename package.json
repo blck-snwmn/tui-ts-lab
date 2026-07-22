@@ -10,12 +10,11 @@
     "fmt": "oxfmt --write apps/",
     "fmt:check": "oxfmt --check apps/",
     "lint": "oxlint --deny-warnings .",
-    "lint:fix": "oxlint --deny-warnings . --fix",
-    "typecheck": "cd apps/opentui-diff-viewer && bun run typecheck && cd ../sample-react-ink && bun run typecheck"
+    "lint:fix": "oxlint --deny-warnings . --fix"
   },
   "devDependencies": {
     "oxfmt": "0.59.0",
-    "oxlint": "1.74.0",
-    "oxlint-tsgolint": "0.25.0"
+    "oxlint": "1.75.0",
+    "oxlint-tsgolint": "7.0.2001"
   }
 }
