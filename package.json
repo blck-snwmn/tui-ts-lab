@@ -15,6 +15,6 @@
   "devDependencies": {
     "oxfmt": "0.68.0",
     "oxlint": "1.83.0",
-    "oxlint-tsgolint": "7.0.2001"
+    "oxlint-tsgolint": "7.0.2002"
   }
 }
